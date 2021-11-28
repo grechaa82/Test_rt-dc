@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    width: 1360px;
+}
+button {
+    font-size: 20px;
+    border: none;
+    background-color: transparent;
+}
+
+.navBar {
+    min-height: 500px;
+    width: 200px;
+    float: left;
+    border-right: #eee 2px solid;
+}
+.categoryTable {
+    padding: 40px;
+    color: #888;
+}
+.pet {
+    color: #000;
+    margin-bottom: 40px;
+}
+.people {margin-bottom: 40px;}
+.container {
+    float: left;
+    margin: 40px;
+}
+
+.title {
+    float: left;
+    font-size: 32px;
+    margin-bottom: 38px;
+    margin-right: 40px;
+}
+
+.addRow {
+    float: left;
+    color: #3E9AEE;
+    margin-right: 40px;
+    margin-top: 12px;
+    margin-bottom: 40px;    
+    font-family: 'Roboto', sans-serif;
+}
+
+.deleteRow {
+    float: left;
+    color: #F87070;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    margin-top: 12px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.generateTable {
+    float: left;
+    margin-right: 40px;
+    color: #28B661;
+    margin-bottom: 40px;
+    margin-top: 12px;
+    font-family: 'Roboto', sans-serif;
+}
+
+table {
+    margin-top: 20px;
+    text-align: left;
+}
+
+th {
+    padding-bottom: 20px;
+    font-weight: normal;
+    color: #888;
+    padding-right: 50px;
+}
+
+.thAddRow {
+    color: #3E9AEE;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+td {
+    padding-right: 50px;
+    padding-bottom: 30px;
+}
+
+td .duttonDeleteRow {
+    color: #B6B6B6;
+    font-size: 18px;
+    border: none;
+    background-color: transparent;
+    font-family: 'Roboto', sans-serif;
+}
+
+input {
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+}
+
+input::placeholder {
+    color: #000;
+}
