@@ -1,14 +1,8 @@
-const data = [
-	{"pet": "Dog", "name": "Marah"},
-	{"pet": "Cat", "name": "Lindae"},
-	{"pet": "Parrot", "name": "Timon"},
-	{"pet": "Dog", "name": "Wang"},
-	{"pet": "Cat", "name": "Raymond"},
-	{"pet": "Dog", "name": "Madonna"},
-	{"pet": "Parrot", "name": "Ray"},
-	{"pet": "Cat", "name": "Rina"},
-	{"pet": "Dog", "name": "Hakeem"},
-	{"pet": "Cat", "name": "Chaim"}
+var data = [
+	{pet: "Dog", name: "Marah"},
+	{pet: "Cat", name: "Lindae"},
+	{pet: "Parrot", name: "Timon"},
+	{pet: "Dog", name: "Wang"},
 ]
 
 function AddRow(tableRow) {
@@ -22,18 +16,41 @@ function DeleteRow(This) {
     This.closest('tr').remove();
 };
 
+function saveСhanges() {
+    var newData = [];
+    x = document.getElementById("Table").rows.length;
+    for(i=1;i<x;i++){
+        var tr = document.getElementsByTagName("tr")[i];
+        for(j=0; j<1; j++) {
+            var pet = tr.getElementsByTagName("td")[j].innerText;
+        };
+        for(m=1; m<2; m++) {
+            var name = tr.getElementsByTagName("td")[j].innerText;
+        };
+        newData.push({pet, name});
+    };
+    data = newData;
+    newData = [];
+};
+
 function RenderTable() {
-    const tbodyEl = document.querySelector("tbody");
+    lenTr = document.getElementById('tableBody').rows.length;
+    
+    for (var i=0; i < lenTr; i++){
+        var z = document.getElementById("IdTr");
+        z.remove();
+    };
+
+    var tbodyEl = document.getElementById("tableBody");
     for (var i in data) {
-        const petEl = data[i].pet
-        const nameEl = data[i].name
-        console.log(petEl);
+        let petEl = data[i].pet;
+        let nameEl = data[i].name;
         tbodyEl.innerHTML += `
-            <tr>
-                <td><input type="text" placeholder="${petEl}"></td>
-                <td><input type="text" placeholder="${nameEl}"></td>
+            <tr id="IdTr">
+                <td contenteditable="true" class="TdPet">${petEl}</td>
+                <td contenteditable="true" class="Tdname">${nameEl}</td>
                 <td><button class="duttonDeleteRow" onclick="DeleteRow(this)">Delete</button></td>
             </tr>
         `;
-    }
+    };
 }

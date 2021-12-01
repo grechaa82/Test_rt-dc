@@ -86,8 +86,17 @@ th {
     font-family: 'Roboto', sans-serif;
 }
 
+.SaveСhanges{    
+    float: left;
+    margin-right: 40px;
+    color: #dd1370;
+    margin-bottom: 40px;
+    margin-top: 12px;
+
+}
+
 td {
-    padding-right: 50px;
+    padding-right: 120px;
     padding-bottom: 30px;
 }
 
